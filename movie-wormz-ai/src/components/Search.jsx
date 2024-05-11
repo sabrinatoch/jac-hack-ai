@@ -7,8 +7,10 @@ function Search({ search }){
         setInputTitle(e.target.value);
     };
     const handleClick = () => {
-        search(inputTitle);
-        clear();
+        if (inputTitle.length > 2) {
+            search(inputTitle);
+            clear();
+        }
     }
     const clear = () => {
         setInputTitle("");
