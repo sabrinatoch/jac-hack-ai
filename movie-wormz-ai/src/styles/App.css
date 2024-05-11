@@ -5,6 +5,12 @@
   text-align: center;
 }
 
+body{
+  color: #151109;
+  background-color: #F2EBE0;
+  background-image: url('../movie-9pvmdtvz4cb0xl37.jpg');
+}
+
 .language-container {
   display: flex;
   gap: 20px;
@@ -69,5 +75,23 @@
 }
 
 form{
-  background-color: blanchedalmond;
+  background-color: #a5aee19c;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+input[type="submit"]{
+    background-color: #A5AEE1;
+    font-weight: bold;
+    border-radius: 7px;
+    border-width: 0px;
+    border-color: #A5AEE1;
+}
+
+label{
+  font-weight: bold;
+}
+
+div.results{
+    grid-template-columns: auto auto auto;
 }
