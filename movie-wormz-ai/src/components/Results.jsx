@@ -3,11 +3,9 @@ import '../styles/App.css'
 
 function Results(){
     return(
-        <form>
-            <label for="search">Search: </label>
-            <input id="search" name="search" type="text"/>
-            <input type="submit" name ="submit" id="submit"/>
-        </form>
+       <div>
+        
+       </div>
     );
 }
 

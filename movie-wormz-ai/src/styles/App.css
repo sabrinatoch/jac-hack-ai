@@ -5,6 +5,11 @@
   text-align: center;
 }
 
+body{
+  color: #151109;
+  background-color: #F2EBE0;
+}
+
 .language-container {
   display: flex;
   gap: 20px;
@@ -69,6 +74,6 @@
 }
 
 form{
-  background-color: blanchedalmond;
+  background-color: #AE6762;
   padding: 10px;
 }
