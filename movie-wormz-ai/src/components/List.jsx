@@ -11,8 +11,7 @@ export default function List({ movies, onMovieClick }) {
               key={mov.Key}
               onClick={() => onMovieClick(mov.Key)}
             >
-              <p className="title">{mov.Title}</p>
-              <p>Year: {mov.Year}</p>
+              <p className="title">{mov.title}</p>
             </div>
           ))
         ) : (

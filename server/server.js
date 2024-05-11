@@ -16,10 +16,14 @@ app.get("/movies/:title", async (req, res) => {
     let title = req.params.title;
     let movies = [];
     console.log(title);
-    await moviedb.searchMovie({ query: title}).then((res) => movies.push(res));
-    console.log(movies);
-    res.json(movies);
+    await moviedb.searchMovie({ query : title }).then((res) => movies.push(res.results));
+    if (movies.length > 0)
+        res.json(movies);
+    else
+        res.end("No movie found");
 })
+
+app.use(express.json());
 
 app.listen(port, () => {
     console.log("Listening on port 8888");

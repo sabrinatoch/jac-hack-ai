@@ -23,8 +23,9 @@ function App() {
           .then((data) => data)
         );
       }
-      fetchTitleMovies();
-      console.log(movies);
+      fetchTitleMovies().then(() => {
+        console.log(movies);
+      });
     }
   } // searchMovies()
 
