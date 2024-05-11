@@ -6,7 +6,7 @@
 }
 
 body{
-  color: #151109;
+  color: white;
   background-color: #F2EBE0;
   background-image: url('../movie-9pvmdtvz4cb0xl37.jpg');
 }
@@ -75,6 +75,7 @@ body{
 }
 
 form{
+  color: #151109;
   background-color: #a5aee19c;
   padding: 20px;
   border-radius: 15px;
