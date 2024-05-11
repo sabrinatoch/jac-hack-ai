@@ -13,15 +13,8 @@ function App() {
   const [movies, setMovies] = useState([]);
   const [isHidden, setHidden] = useState(true);
 
-
-  moviedb.searchMovie({ query: 'Alien' })
-.then((res) => {
-  console.log(res)
-})
-.catch(console.error);
-
-
   const searchMovies = (title) => {
+    console.log(title);
     if (title.length > 0) {
       async function fetchTitleMovies() {
         setMovies(
@@ -31,6 +24,7 @@ function App() {
         );
       }
       fetchTitleMovies();
+      console.log(movies);
     }
   } // searchMovies()
 

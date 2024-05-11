@@ -14,11 +14,11 @@ function Search({ search }){
         setInputTitle("");
     }
     return(
-        <form>
-            <label for="search">Search: </label>
+        <div>
+            <label htmlFor="search">Search: </label>
             <input id="search" name="search" type="text" onChange={handleChange} value={inputTitle}/>
             <button name ="submit" id="submit" onClick={handleClick}>Submit</button>
-        </form>
+        </div>
     );
 }
 
