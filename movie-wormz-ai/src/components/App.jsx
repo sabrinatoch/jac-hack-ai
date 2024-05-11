@@ -19,7 +19,7 @@ function App() {
       async function fetchTitleMovies() {
         setMovies(
           await fetch("/movies/" + title)
-          .then((res) => res.json())
+          .then((res) => res)
           .then((data) => data)
         );
       }
