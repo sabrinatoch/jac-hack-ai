@@ -13,7 +13,7 @@ export default function List({ movies, onMovieClick }) {
                 onClick={() => onMovieClick(mov.id)}
               >
                 <p className="title">{mov.title}</p>
-                <img src={m.poster_path}/>
+                <img src={`https://image.tmdb.org/t/p/w500/${mov.poster_path}`} width="81" height="120"/>
               </div>
             ))
           )

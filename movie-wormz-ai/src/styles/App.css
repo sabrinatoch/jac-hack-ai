@@ -94,6 +94,20 @@ label{
   font-weight: bold;
 }
 
-div.results{
-    grid-template-columns: auto auto auto;
+div.App-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 50px;
+  row-gap: 50px;
+}
+div.mov{
+  color: black;
+    background-color: #f2ebe09c;
+  padding: 5px;
+  border-radius: 15px;
+  padding-bottom: 5px;
+}
+
+.title{
+  font-weight: bold;
 }
