@@ -13,6 +13,7 @@ export default function List({ movies, onMovieClick }) {
                 onClick={() => onMovieClick(mov.id)}
               >
                 <p className="title">{mov.title}</p>
+                
               </div>
             ))
           )
