@@ -14,7 +14,6 @@ function App() {
   const [isHidden, setHidden] = useState(true);
 
   const searchMovies = (title) => {
-    console.log(title);
     if (title.length > 0) {
       async function fetchTitleMovies() {
         setMovies(
@@ -23,9 +22,7 @@ function App() {
           .then((data) => data)
         );
       }
-      fetchTitleMovies().then(() => {
-        console.log(movies);
-      });
+      fetchTitleMovies()
     }
   } // searchMovies()
 

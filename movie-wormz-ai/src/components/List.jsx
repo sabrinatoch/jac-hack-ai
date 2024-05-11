@@ -8,8 +8,8 @@ export default function List({ movies, onMovieClick }) {
           movies.map((mov) => (
             <div
               className="mov"
-              key={mov.Key}
-              onClick={() => onMovieClick(mov.Key)}
+              key={mov.id}
+              onClick={() => onMovieClick(mov.id)}
             >
               <p className="title">{mov.title}</p>
             </div>
