@@ -11,7 +11,8 @@ function Details() {
             <p>Movie Release Date</p>
             <p>Movie Genre</p>
             <p>Movie Cast</p>
-            <p>Movie Box Office</p>
+            <p>Budget</p>
+            <p>Revenue</p>
             <p>Movie Language</p>
             <p>Movie Awards</p>
         </div>
