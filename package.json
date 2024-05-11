@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "@huggingface/agents": "^0.0.5",
-    "@huggingface/hub": "^0.15.0",
-    "@huggingface/inference": "^2.6.7"
-  }
-}

@@ -1,12 +1,23 @@
 import { useState } from 'react'
 import '../styles/App.css'
 
-function Search(){
+function Search({ search }){
+    const [inputTitle, setInputTitle] = useState("");
+    const handleChange = (e) => {
+        setInputTitle(e.target.value);
+    };
+    const handleClick = () => {
+        search(inputTitle);
+        clear();
+    }
+    const clear = () => {
+        setInputTitle("");
+    }
     return(
         <form>
             <label for="search">Search: </label>
-            <input id="search" name="search" type="text"/>
-            <input type="submit" name ="submit" id="submit"/>
+            <input id="search" name="search" type="text" onChange={handleChange} value={inputTitle}/>
+            <button name ="submit" id="submit" onClick={handleClick}>Submit</button>
         </form>
     );
 }
