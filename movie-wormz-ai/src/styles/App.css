@@ -13,8 +13,8 @@ body {
   background-image: url("../wp5978594.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: "Jersey 15";
-  font-size: 1.5em;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 
 .language-container {
@@ -119,12 +119,55 @@ body {
   gap: 10px;
 }
 
-/* div.search{
-  color: #151109;
-  background-color: #a5aee19c;
-  padding: 20px;
-  border-radius: 15px;
-} */
+.popup {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  background-color: #000000;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  box-shadow: #000000 10px 10px 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.close {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.7;
+}
+
+.close:hover {
+  opacity: 1;
+}
+
+.close:before,
+.close:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 20px;
+  width: 2px;
+  background-color: #ffffff;
+}
+
+.close:before {
+  transform: rotate(45deg);
+}
+
+.close:after {
+  transform: rotate(-45deg);
+}
 
 input[type="submit"] {
   background-color: #a5aee1;
@@ -144,8 +187,9 @@ div.App-list {
   grid-template-columns: 1fr;
   column-gap: 50px;
   row-gap: 50px;
-  margin-top: 25px;
+  padding-top: 90px;
 }
+
 div.mov {
   color: black;
   padding: 5px;
@@ -159,6 +203,13 @@ div.mov {
 
 .title {
   font-weight: bold;
+}
+
+.none {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); 
 }
 
 @media all and (min-width: 500px) {
@@ -190,13 +241,13 @@ div.mov {
     margin-top: 25px;
   }
 }
-
-/* .mov{
+/* 
+SearchVibe{
   opacity: 0;
   transition: opacity 1s ease;
 }
 
-.mov.visible{
+Search{
   opacity: 1;
-} */
-
+}
+ */

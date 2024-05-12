@@ -40,7 +40,7 @@ app.get("/movies/:title", async (req, res) => {
             console.error("Error fetching movie:", error);
         }
     }));
-    console.log(movies);
+    // console.log(movies);
     res.json(movies);
 }) // movies title
 
