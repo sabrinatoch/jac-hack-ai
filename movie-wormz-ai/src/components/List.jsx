@@ -13,7 +13,7 @@ export default function List({ movies, onMovieClick }) {
                 onClick={() => onMovieClick(mov.id)}
               >
                 <p className="title">{mov.title}</p>
-                <img src={m.poster_path}/>
+                {/* <img src={m.poster_path}/> */}
               </div>
             ))
           )

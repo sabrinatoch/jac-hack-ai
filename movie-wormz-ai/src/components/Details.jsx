@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../styles/App.css";
 
-function Details() {
+function Details(movieTitle, movieDescription, movieRating, movieReleaseDate, movieGenre, movieCast, budget, revenue, movieLanguage, movieAwards) {
     return(
 
         <div class="movie-details">
