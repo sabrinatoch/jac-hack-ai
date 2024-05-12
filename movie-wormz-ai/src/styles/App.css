@@ -119,11 +119,35 @@ body {
   gap: 10px;
 }
 
-/* div.search{
-  color: #151109;
-  background-color: #a5aee19c;
-  padding: 20px;
-  border-radius: 15px;
+/* .close {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.7;
+}
+
+.close:hover {
+  opacity: 1;
+}
+
+.close:before,
+.close:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 20px;
+  width: 2px;
+  background-color: #ffffff;
+}
+
+.close:before {
+  transform: rotate(45deg);
+}
+
+.close:after {
+  transform: rotate(-45deg);
 } */
 
 input[type="submit"] {
@@ -159,6 +183,13 @@ div.mov {
 
 .title {
   font-weight: bold;
+}
+
+.none {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); 
 }
 
 @media all and (min-width: 500px) {
