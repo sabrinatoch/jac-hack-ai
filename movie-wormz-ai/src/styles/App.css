@@ -234,6 +234,11 @@ div.mov {
  
 }
 
+.search-results {
+  /* font-weight: bold; */
+  color: rgb(249, 254, 249);
+}
+
 .mov img {
   border-radius: 15px;
 }
@@ -256,6 +261,12 @@ div.mov {
     row-gap: 50px;
     margin-top: 600px;
   }
+  .search-results {
+    position: absolute;
+    top: 34%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+  }
 }
 
 @media all and (min-width: 720px) {
@@ -266,6 +277,12 @@ div.mov {
     row-gap: 50px;
     margin-top: 300px;
   }
+  .search-results {
+    position: absolute;
+    top: 35%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+  }
 }
 
 @media all and (min-width: 950px) {
@@ -275,5 +292,11 @@ div.mov {
     column-gap: 50px;
     row-gap: 50px;
     margin-top: 0px;
+  }
+  .search-results {
+    position: absolute;
+    top: 36%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
   }
 }

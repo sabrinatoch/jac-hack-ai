@@ -9,9 +9,11 @@ function App() {
   // const [count, setCount] = useState(0)
   const [selectedMovie, setSelectedMovie] = useState({});
   const [movies, setMovies] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
   const searchMovies = (title) => {
     if (title.length > 0) {
+      setSearchTerm(title);
       async function fetchTitleMovies() {
         setMovies(
           await fetch("/movies/" + title)
@@ -25,6 +27,7 @@ function App() {
 
   const searchByPlot = (plot) => {
     if (plot.length > 0) {
+      setSearchTerm(plot);
       async function fetchMoviesByPlot() {
         setMovies(
           await fetch("/prompt/" + plot)
@@ -43,7 +46,7 @@ function App() {
         <Search search={searchMovies}></Search>
         <SearchVibe search={searchByPlot}></SearchVibe>
       </div>
-      <List movies={movies}></List>
+      <List movies={movies} searchTerm={searchTerm}></List>
     </div>
   );
 }
