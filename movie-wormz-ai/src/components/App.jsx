@@ -43,6 +43,7 @@ function App() {
         <SearchVibe search={searchByPlot}></SearchVibe>
       </div>
       <List movies={movies}></List>
+      
     </div>
   );
 }

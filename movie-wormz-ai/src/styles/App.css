@@ -128,22 +128,24 @@ body {
   width: 90%;
 }
 
+.st {
+  margin-bottom: 0;
+}
+
 .popup {
   display: block;
   position: fixed;
-  top: 300px;
-  /* left: 50%; */
-  margin-right: auto;
-  margin-left: auto;
-  z-index: 10 !important;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center both vertically and horizontally */
+  z-index: 1000 !important;
   padding: 20px;
   border-radius: 10px;
   color: white;
   background-color: #000000;
-  /* -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); */
   box-shadow: #000000 10px 10px 10px;
 }
+
 
 .hidden {
   display: none;
@@ -204,14 +206,16 @@ div.App-list {
   column-gap: 50px;
   row-gap: 50px;
   padding-top: 90px;
-  
+  position: relative;
+  top: 200px;
+  left: 5%;
 }
 
-div.App-list div.mov{
+/* div.App-list div.mov{
  position: relative;
   top: 70%;
   left: 5%;
-}
+} */
 
 div.mov {
   color: black;

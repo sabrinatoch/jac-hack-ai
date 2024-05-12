@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import ReactDOM from 'react-dom';
 import "../styles/App.css";
 
 function Details({ movie, hidden, onClose }) {
@@ -44,20 +45,36 @@ function Details({ movie, hidden, onClose }) {
     fetchRottenScore();
   }, [movie.title]);
 
-  return (
-    <div className={hidden ? "hidden" : "popup"}>
-      <a href="#" className="close" onClick={onClose}></a>
-      <h3>{movie.title}</h3>
-      <p>{movie.release_date}</p>
-      <p>🍅 {rottenScore}% on RottenTomatoes</p>
-      <p>{movie.overview}</p>
-      <p>Currently streaming on:</p>
-      <ul>
-        {streamingServices.map((service, index) => (
-          <li key={index}>{service}</li>
-        ))}
-      </ul>
-    </div>
-  );
+  useEffect(() => {
+    if (!hidden) {
+      // Append the popup to the body when it's displayed
+      const popupContainer = document.createElement('div');
+      popupContainer.className = 'popup-container';
+      document.body.appendChild(popupContainer);
+      ReactDOM.render(
+        <div className="popup">
+          <a href="#" className="close" onClick={onClose}></a>
+          <h3>{movie.title}</h3>
+          <p>📅 {movie.release_date}</p>
+          <p>🍅 {rottenScore}% on RottenTomatoes</p>
+          <p><b>Synopsis:</b> {movie.overview}</p>
+          <p className="st">Currently streaming on:</p>
+          <ul>
+            {streamingServices.map((service, index) => (
+              <li key={index}>{service}</li>
+            ))}
+          </ul>
+        </div>,
+        popupContainer
+      );
+
+      return () => {
+        // Cleanup function to remove the popup when hidden
+        document.body.removeChild(popupContainer);
+      };
+    }
+  }, [hidden, movie, onClose, rottenScore, streamingServices]);
+
+  return null; // Return null here as the popup is appended to the body directly
 }
 export default Details;
