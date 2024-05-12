@@ -2,13 +2,13 @@ import { useState } from 'react'
 import '../styles/App.css'
 
 function SearchVibe({ search }){
-    const [inputTitle, setInputTitle] = useState("");
+    const [inputVibe, setInputVibe] = useState("");
     const handleChange = (e) => {
-        setInputTitle(e.target.value);
+        setInputVibe(e.target.value);
     };
     const handleClick = () => {
-        if (inputTitle.length > 2) {
-            search(inputTitle);
+        if (inputVibe.length > 2) {
+            search(inputVibe);
             clear();
         }
     }
@@ -19,12 +19,11 @@ function SearchVibe({ search }){
         }
       };
     const clear = () => {
-        setInputTitle("");
+        setInputVibe("");
     }
     return(
         <div className="search">
-            <label htmlFor="vibe">Search by Vibes: </label>
-            <input id="vibe" name="vibe" type="text" onChange={handleChange} value={inputTitle} onKeyDown={handleKeyDown}/>
+            <input id="vibe" name="vibe" type="text" onChange={handleChange} value={inputVibe} onKeyDown={handleKeyDown} placeholder='Search by plot/genre/vibe...'/>
         </div>
     );
 }
