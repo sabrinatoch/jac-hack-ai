@@ -40,6 +40,12 @@ app.get("/movies/:title", async (req, res) => {
   let tildaSeparatedMovies = completion.choices[0].message.content;
   let moviesArray = tildaSeparatedMovies.split("~");
 
+  //making sure all movies only added/displayed once
+  function onlyUnique(value, index, array) {
+    return array.indexOf(value) === index;
+  }
+   moviesArray = moviesArray.filter(onlyUnique);
+
   await Promise.all(
     moviesArray.map(async (mov) => {
       try {
