@@ -12,7 +12,6 @@ function App() {
   // const [count, setCount] = useState(0)
   const [selectedMovie, setSelectedMovie] = useState({});
   const [movies, setMovies] = useState([]);
-  const [isHidden, setHidden] = useState(true);
 
   const searchMovies = (title) => {
     if (title.length > 0) {
@@ -52,9 +51,6 @@ function App() {
     }
   }; // movieDetails()
 
-  const closePopup = () => {
-    setHidden(true);
-  }; // closePopup()
 
   return (
     <div>

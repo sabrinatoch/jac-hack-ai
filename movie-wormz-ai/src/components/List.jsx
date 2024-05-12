@@ -3,15 +3,13 @@ import Details from "./Details";
 
 export default function List({ movies, onMovieClick }) {
   const [selectedMovieId, setSelectedMovieId] = React.useState(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isHidden, setHidden] = useState(true);
+  const closePopup = () => {
+    setHidden(true);
+  }; // closePopup()
   const toggleDetails = (id) => {
-    if(selectedMovieId === id) {
-      setSelectedMovieId(null);}
-      else{
-        setSelectedMovieId(id);
-        setIsVisible(true);
-      }
-    };
+    setHidden(false);
+  };
   const [loading, setLoading] = useState(true);
   const [imageSrc, setImageSrc] = useState(null);
 
@@ -21,8 +19,8 @@ export default function List({ movies, onMovieClick }) {
 
   const handleImageError = () => {
     setLoading(false);
-    setImageSrc('../default_poster.png');
-    console.log('Error loading image');
+    setImageSrc("../default_poster.png");
+    console.log("Error loading image");
   };
 
   return (
@@ -49,7 +47,9 @@ export default function List({ movies, onMovieClick }) {
               ) : (
                 <p className="title">{mov.title}</p>
               )}
-              {selectedMovieId === mov.id && <Details mov={mov} />}
+              {selectedMovieId === mov.id && (
+                <Details movie={mov} hidden={isHidden} onClose={closePopup} />
+              )}
             </div>
           ))
         ) : (

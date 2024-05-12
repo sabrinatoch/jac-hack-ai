@@ -1,15 +1,16 @@
 import { useState } from "react";
 import "../styles/App.css";
 
-function Details(title, overview, original_Language, release_date,popularity ) {
-    return(
+function Details({ movie, hidden, onClose }) {
 
-        <div class="movie-details">
-          <h3>{title}</h3>
-            <p>{overview}</p>
-            <P>{release_date}</P>
-            {original_Language === "en"? <p>Original Language: English</p>: <p>Original Language: unknown</p>}
-        </div>
-    );
+  return (
+    <div className={hidden ? "hidden" : "popup"}>
+      <a href="#" className="close" onClick={onClose}></a>
+      <h3>{movie.title}</h3>
+      <p>{movie.release_date}</p>
+      <p>{movie.overview}</p>
+      <p>Where you can watch it:</p>
+    </div>
+  );
 }
 export default Details;
