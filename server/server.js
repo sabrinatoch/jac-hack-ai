@@ -70,7 +70,7 @@ app.get("/movieStreams/:title", async (req, res) => {
       {
         role: "system",
         content:
-          "Please give me a tilda-separated list of streaming services in Canada that are currently streaming " +
+          "Please give me a tilda-separated list of the streaming services in Canada that are currently streaming " +
           title +
           " without responding with any other text so that I can parse through the results.",
       },

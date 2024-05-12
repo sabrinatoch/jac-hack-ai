@@ -38,10 +38,10 @@ function App() {
 
   return (
     <div>
-      {/* <div class="search-inputs"> */}
+      <div className="search-inputs">
         <Search search={searchMovies}></Search>
         <SearchVibe search={searchByPlot}></SearchVibe>
-      {/* </div> */}
+      </div>
       <List movies={movies}></List>
     </div>
   );

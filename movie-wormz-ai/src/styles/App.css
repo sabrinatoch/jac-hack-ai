@@ -74,15 +74,7 @@ body {
 }
 
 .search-inputs {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 15px;
-  position: fixed;
-  left: 50%;
-  top: 5%;
-  transform: translate(-50%, -50%);
+  z-index: -5;
 }
 
 #search {
@@ -92,10 +84,11 @@ body {
   font-size: 19px;
   font-family: "Jerseyv";
   margin-bottom: 20px;
-  position: fixed;
+  position: absolute;
   left: 50%;
   top: 5%;
   transform: translate(-50%, -50%);
+  z-index: -0.5;
 }
 
 #vibe {
@@ -105,10 +98,11 @@ body {
   font-size: 19px;
   font-family: "Jerseyv";
   margin-bottom: 20px;
-  position: fixed;
+  position: absolute;
   left: 50%;
   top: 15%;
   transform: translate(-50%, -50%);
+  z-index: -0.5;
 }
 
 .progress-text {
@@ -130,20 +124,24 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  z-index: 1;
+  width: 90%;
 }
 
 .popup {
   display: block;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  z-index: 20;
+  top: 300px;
+  /* left: 50%; */
+  margin-right: auto;
+  margin-left: auto;
+  z-index: 10 !important;
   padding: 20px;
   border-radius: 10px;
   color: white;
   background-color: #000000;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  /* -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   box-shadow: #000000 10px 10px 10px;
 }
 
@@ -206,6 +204,7 @@ div.App-list {
   column-gap: 50px;
   row-gap: 50px;
   padding-top: 90px;
+  
 }
 
 div.App-list div.mov{
