@@ -5,8 +5,8 @@ export default function List({ movies, onMovieClick }) {
     <div id="container">
       <div className="App-list">
         {movies.length > 0 ? (
-          movies.map((movie) =>
-            movie.map((mov) => (
+          // movies.map((movie) =>
+            movies.map((mov) => (
               <div
                 className="mov"
                 key={mov.id}
@@ -15,7 +15,7 @@ export default function List({ movies, onMovieClick }) {
                 <p className="title">{mov.title}</p>
               </div>
             ))
-          )
+          // )
         ) : (
           <div className="none">No movies found.</div>
         )}
