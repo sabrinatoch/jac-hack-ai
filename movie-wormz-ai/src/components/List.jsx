@@ -29,27 +29,29 @@ export default function List({ movies, onMovieClick }) {
       <div className="App-list">
         {movies.length > 0 ? (
           // movies.map((movie) =>
-            movies.map((mov) => (
-              <div
-                className="mov"
-                key={mov.id}
-                onClick={() => onMovieClick(mov.id)}
-              >
-                {console.log(mov)}
-                <p className="title">{mov.title}</p>
-                <img  onClick={() => toggleDetails(mov.id)}
-                  src={`https://image.tmdb.org/t/p/w500/${mov.poster_path}`} 
-                  width="81" 
-                  height="120"  
+          movies.map((mov) => (
+            <div
+              className="mov"
+              key={mov.id}
+              onClick={() => onMovieClick(mov.id)}
+            >
+              {mov.poster_path ? (
+                <img
+                  src={`https://image.tmdb.org/t/p/w500/${mov.poster_path}`}
+                  width="175"
+                  onClick={() => toggleDetails(mov.id)}
                   onLoad={handleImageLoad}
                   onError={handleImageError}
                   alt={mov.title}
                 />
-                {selectedMovieId === mov.id && <Details mov={mov} />}
-              </div>
-            ))
-          // )
+              ) : (
+                <p className="title">{mov.title}</p>
+              )}
+              {selectedMovieId === mov.id && <Details mov={mov} />}
+            </div>
+          ))
         ) : (
+          // )
           <div className="none">No movies found.</div>
         )}
       </div>
