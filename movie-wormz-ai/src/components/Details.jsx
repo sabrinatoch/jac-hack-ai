@@ -1,20 +1,11 @@
 import { useState } from "react";
 import "../styles/App.css";
 
-function Details(movieTitle, movieDescription, movieRating, movieReleaseDate, movieGenre, movieCast, budget, revenue, movieLanguage, movieAwards) {
+function Details(title, overview, original_Language, release_date,popularity ) {
     return(
 
         <div class="movie-details">
-            <h1>Movie Title</h1>
-            <p>Movie Description</p>
-            <p>Movie Rating</p>
-            <p>Movie Release Date</p>
-            <p>Movie Genre</p>
-            <p>Movie Cast</p>
-            <p>Budget</p>
-            <p>Revenue</p>
-            <p>Movie Language</p>
-            <p>Movie Awards</p>
+          <h3>{title}</h3>
         </div>
     );
 }

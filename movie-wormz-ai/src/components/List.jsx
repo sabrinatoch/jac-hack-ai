@@ -36,8 +36,8 @@ export default function List({ movies, onMovieClick }) {
                 onClick={() => onMovieClick(mov.id)}
               >
                 {console.log(mov)}
-                <p className="title" onClick={() => toggleDetails(mov.id)}>{mov.title}</p>
-                <img 
+                <p className="title">{mov.title}</p>
+                <img  onClick={() => toggleDetails(mov.id)}
                   src={`https://image.tmdb.org/t/p/w500/${mov.poster_path}`} 
                   width="81" 
                   height="120"  

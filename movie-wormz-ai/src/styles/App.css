@@ -108,6 +108,13 @@ div.mov{
   padding-bottom: 5px;
 }
 
+div.none{
+  position: none;
+left:50%;
+top:50%;
+transform: translate(-50%, -50%);
+
+}
 .title{
   font-weight: bold;
 }
