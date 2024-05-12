@@ -7,9 +7,8 @@ const port = 8888;
 
 import OpenAI from "openai";
 
-// apiKey = sk-proj-eKcPtkULFLk6uU4w9YzkT3BlbkFJqFDiexYq0SxaanH5B59J
 const openai = new OpenAI({
-  apiKey: "replace with key above",
+  apiKey: "replace with key provided",
 });
 
 import path from "path";
