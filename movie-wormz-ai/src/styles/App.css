@@ -74,7 +74,7 @@ body{
   gap: 10px;
 }
 
-form{
+div.search{
   color: #151109;
   background-color: #a5aee19c;
   padding: 20px;
