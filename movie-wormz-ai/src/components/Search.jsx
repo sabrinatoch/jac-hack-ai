@@ -15,7 +15,6 @@ function Search({ search }){
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
           handleClick();
-          console.log('Enter key pressed, input value:', inputValue);
         }
       };
     const clear = () => {
