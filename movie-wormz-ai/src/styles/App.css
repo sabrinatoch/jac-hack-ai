@@ -17,6 +17,19 @@ body {
 
 }
 
+.fadeIn {
+  animation: fly 2s ease-out;
+}
+
+@keyframes fly {
+  0% {
+    transform: translateY(200%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
 .language-container {
   display: flex;
   gap: 20px;
@@ -189,8 +202,6 @@ div.App-list {
   column-gap: 50px;
   row-gap: 50px;
   padding-top: 90px;
-
- 
 }
 
 div.App-list div.mov{

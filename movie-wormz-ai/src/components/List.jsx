@@ -26,15 +26,6 @@ export default function List({ movies, onMovieClick }) {
     setGridTransform(`translateY(${translateY}px)`);
   }, [movies]);
 
-  // const closePopup = () => {
-  //   setHidden(true);
-  // };
-
-  // const toggleDetails = (id) => {
-  //   setHidden(false);
-  //   setSelectedMovieId(id);
-  // };
-
   const handleImageLoad = () => {
     setLoading(false);
   };
