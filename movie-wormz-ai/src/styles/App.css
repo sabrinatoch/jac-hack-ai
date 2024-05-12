@@ -13,8 +13,8 @@ body {
   background-image: url("../wp5978594.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: "Jersey 15";
-  font-size: 1.5em;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 
 .language-container {
@@ -127,7 +127,8 @@ body {
   z-index: 10;
   padding: 10px;
   border-radius: 10px;
-  background-color: #6d2732;
+  color: white;
+  background-color: #000000;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   box-shadow: #000000 10px 10px 10px;

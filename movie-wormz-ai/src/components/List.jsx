@@ -5,11 +5,15 @@ export default function List({ movies, onMovieClick }) {
   const [selectedMovieId, setSelectedMovieId] = React.useState(null);
   const [isHidden, setHidden] = useState(true);
   const closePopup = () => {
-    setHidden(true);
-  }; // closePopup()
-  const toggleDetails = (id) => {
-    setHidden(false);
+    setSelectedMovieId(null); // Reset the selected movie ID
+    setHidden(true); // Hide the Details component
   };
+  
+  const toggleDetails = (id) => {
+    setSelectedMovieId(id); // Set the selected movie ID
+    setHidden(false); // Update the visibility state
+  };
+  
   const [loading, setLoading] = useState(true);
   const [imageSrc, setImageSrc] = useState(null);
 
