@@ -3,12 +3,13 @@ import Details from "./Details";
 
 export default function List({ movies, onMovieClick }) {
   const [selectedMovieId, setSelectedMovieId] = React.useState(null);
-
+  const [isVisible, setIsVisible] = useState(false);
   const toggleDetails = (id) => {
     if(selectedMovieId === id) {
       setSelectedMovieId(null);}
       else{
         setSelectedMovieId(id);
+        setIsVisible(true);
       }
     };
   const [loading, setLoading] = useState(true);
@@ -35,6 +36,7 @@ export default function List({ movies, onMovieClick }) {
               key={mov.id}
               onClick={() => onMovieClick(mov.id)}
             >
+              {/* {console.log(isVisible)} */}
               {mov.poster_path ? (
                 <img
                   src={`https://image.tmdb.org/t/p/w500/${mov.poster_path}`}
