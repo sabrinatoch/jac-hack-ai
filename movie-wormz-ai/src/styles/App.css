@@ -178,6 +178,10 @@ input[type="submit"] {
   padding: 5px;
 }
 
+input{
+  z-index: 5;
+}
+
 label {
   font-weight: bold;
 }
@@ -197,7 +201,6 @@ div.App-list div.mov{
  position: relative;
   top: 70%;
   left: 5%;
-  
 }
 
 div.mov {
@@ -205,7 +208,7 @@ div.mov {
   padding: 5px;
   border-radius: 15px;
   padding-bottom: 5px;
-  
+ 
 }
 
 .mov img {
@@ -220,7 +223,7 @@ div.mov {
   position: fixed;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%);
 }
 
 @media all and (min-width: 500px) {
