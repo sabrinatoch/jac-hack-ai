@@ -39,7 +39,7 @@ function App() {
   return (
     <div>
       <div className="search-inputs">
-        <h1>Movie Wormz</h1>
+        <h1>Movie Wormz 🐛</h1>
         <Search search={searchMovies}></Search>
         <SearchVibe search={searchByPlot}></SearchVibe>
       </div>

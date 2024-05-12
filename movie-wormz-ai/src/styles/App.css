@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Jersey+15&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -80,24 +80,31 @@ body {
   top: 20%;
   transform: translate(-50%, -50%);
   z-index: -0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
 }
 
 #search {
-  width: 80%;
+  width: 500px;
   padding: 15px;
   border-radius: 20px;
   font-size: 19px;
   font-family: "Jerseyv";
   margin-bottom: 20px;
+  border: rgb(4, 255, 0) 3px solid;
 }
 
 #vibe {
-  width: 80%;
+  width: 500px;
   padding: 15px;
   border-radius: 20px;
   font-size: 19px;
   font-family: "Jerseyv";
   margin-bottom: 20px;
+  border: red 3px solid;
 }
 
 .progress-text {
@@ -202,12 +209,15 @@ div.App-list {
   row-gap: 50px;
   padding-top: 90px;
   position: relative;
-  top: 130px;
+  top: 10px;
   /* left: 5%; */
 }
 
 h1 {
   text-align: center;
+  font-family: "Limelight";
+  font-size: 1.15em;
+  color: rgb(86, 189, 86);
 }
 
 /* div.App-list div.mov{
@@ -244,7 +254,7 @@ div.mov {
     grid-template-columns: 1fr 1fr;
     column-gap: 50px;
     row-gap: 50px;
-    margin-top: 25px;
+    margin-top: 600px;
   }
 }
 
@@ -254,7 +264,7 @@ div.mov {
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 50px;
     row-gap: 50px;
-    margin-top: 25px;
+    margin-top: 300px;
   }
 }
 
@@ -264,6 +274,6 @@ div.mov {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 50px;
     row-gap: 50px;
-    margin-top: 25px;
+    margin-top: 0px;
   }
 }
