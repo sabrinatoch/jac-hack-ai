@@ -190,3 +190,13 @@ div.mov {
     margin-top: 25px;
   }
 }
+
+/* .mov{
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.mov.visible{
+  opacity: 1;
+} */
+
