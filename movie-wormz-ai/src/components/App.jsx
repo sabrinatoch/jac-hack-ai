@@ -38,7 +38,11 @@ function App() {
 
   return (
     <div>
+{/* <h1>Movie Wormz</h1> */}
       <div className="search-inputs">
+      {/* <div class="search-inputs"> */}
+      
+
         <Search search={searchMovies}></Search>
         <SearchVibe search={searchByPlot}></SearchVibe>
       </div>
