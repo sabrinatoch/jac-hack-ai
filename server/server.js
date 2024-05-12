@@ -5,12 +5,11 @@ import express from "express";
 const app = express();
 const port = 8888;
 
-// import {config as dotenvConfig} from 'dotenv';
 import OpenAI from "openai";
-// dotenvConfig();
-// const openaiApiKey = process.env.OPENAI_API_KEY;
+
+// apiKey = sk-proj-eKcPtkULFLk6uU4w9YzkT3BlbkFJqFDiexYq0SxaanH5B59J
 const openai = new OpenAI({
-  apiKey: "sk-proj-eKcPtkULFLk6uU4w9YzkT3BlbkFJqFDiexYq0SxaanH5B59J",
+  apiKey: "replace with key above",
 });
 
 import path from "path";
