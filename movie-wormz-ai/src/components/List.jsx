@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Details from "./Details";
 
-export default function List({ movies, onMovieClick }) {
+export default function List({ movies }) {
   const [selectedMovieId, setSelectedMovieId] = React.useState(null);
   const [isHidden, setHidden] = useState(true);
   const closePopup = () => {
@@ -11,7 +11,7 @@ export default function List({ movies, onMovieClick }) {
   
   const toggleDetails = (id) => {
     setSelectedMovieId(id); // Set the selected movie ID
-    setHidden(false); // Update the visibility state
+    setHidden(false);
   };
   
   const [loading, setLoading] = useState(true);
@@ -36,7 +36,6 @@ export default function List({ movies, onMovieClick }) {
             <div
               className="mov"
               key={mov.id}
-              onClick={() => onMovieClick(mov.id)}
             >
               {/* {console.log(isVisible)} */}
               {mov.poster_path ? (
