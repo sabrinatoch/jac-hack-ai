@@ -185,9 +185,19 @@ label {
 div.App-list {
   display: grid;
   grid-template-columns: 1fr;
+  transition: transform 10s ease;
   column-gap: 50px;
   row-gap: 50px;
   padding-top: 90px;
+
+ 
+}
+
+div.App-list div.mov{
+ position: relative;
+  top: 70%;
+  left: 5%;
+  
 }
 
 div.mov {
@@ -195,6 +205,7 @@ div.mov {
   padding: 5px;
   border-radius: 15px;
   padding-bottom: 5px;
+  
 }
 
 .mov img {
@@ -241,13 +252,3 @@ div.mov {
     margin-top: 25px;
   }
 }
-/* 
-SearchVibe{
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-
-Search{
-  opacity: 1;
-}
- */
