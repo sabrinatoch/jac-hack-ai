@@ -4,7 +4,7 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  /* text-align: center; */
 }
 
 body {
@@ -124,8 +124,8 @@ body {
   position: fixed;
   top: 50%;
   left: 50%;
-  z-index: 10;
-  padding: 10px;
+  z-index: 20;
+  padding: 20px;
   border-radius: 10px;
   color: white;
   background-color: #000000;
@@ -178,6 +178,10 @@ input[type="submit"] {
   padding: 5px;
 }
 
+input{
+  z-index: 10;
+}
+
 label {
   font-weight: bold;
 }
@@ -185,9 +189,18 @@ label {
 div.App-list {
   display: grid;
   grid-template-columns: 1fr;
+  transition: transform 3s ease;
   column-gap: 50px;
   row-gap: 50px;
   padding-top: 90px;
+
+ 
+}
+
+div.App-list div.mov{
+ position: relative;
+  top: 70%;
+  left: 5%;
 }
 
 div.mov {
@@ -195,6 +208,7 @@ div.mov {
   padding: 5px;
   border-radius: 15px;
   padding-bottom: 5px;
+ 
 }
 
 .mov img {
@@ -209,7 +223,7 @@ div.mov {
   position: fixed;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%);
 }
 
 @media all and (min-width: 500px) {
@@ -241,13 +255,3 @@ div.mov {
     margin-top: 25px;
   }
 }
-/* 
-SearchVibe{
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-
-Search{
-  opacity: 1;
-}
- */
