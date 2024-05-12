@@ -22,7 +22,7 @@ function Search({ search }){
     }
     return(
         <div className="search">
-            <label htmlFor="search">Search: </label>
+            <label htmlFor="search">Search by title: </label>
             <input id="search" name="search" type="text" onChange={handleChange} value={inputTitle} onKeyDown={handleKeyDown}/>
         </div>
     );
