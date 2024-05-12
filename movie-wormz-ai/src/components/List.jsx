@@ -7,12 +7,12 @@ export default function List({ movies, onMovieClick }) {
   const [isHidden, setHidden] = useState(true);
 
   const closePopup = () => {
-    setSelectedMovieId(null); // Reset the selected movie ID
-    setHidden(true); // Hide the Details component
+    setSelectedMovieId(null); 
+    setHidden(true); 
   };
   
   const toggleDetails = (id) => {
-    setSelectedMovieId(id); // Set the selected movie ID
+    setSelectedMovieId(id);
     setHidden(false);
   };
 
@@ -71,7 +71,7 @@ export default function List({ movies, onMovieClick }) {
             </div>
           ))
         ) : (
-          <div className="none">No movies found.</div>
+          <div></div>
         )}
       </div>
     </div>

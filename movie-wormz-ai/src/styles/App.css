@@ -14,7 +14,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+  background-color: #000000;
+  height: 250vh;
 }
 
 .fadeIn {
@@ -74,7 +75,11 @@ body {
 }
 
 .search-inputs {
-  z-index: -5;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+  z-index: -0.5;
 }
 
 #search {
@@ -84,11 +89,6 @@ body {
   font-size: 19px;
   font-family: "Jerseyv";
   margin-bottom: 20px;
-  position: absolute;
-  left: 50%;
-  top: 5%;
-  transform: translate(-50%, -50%);
-  z-index: -0.5;
 }
 
 #vibe {
@@ -98,11 +98,6 @@ body {
   font-size: 19px;
   font-family: "Jerseyv";
   margin-bottom: 20px;
-  position: absolute;
-  left: 50%;
-  top: 15%;
-  transform: translate(-50%, -50%);
-  z-index: -0.5;
 }
 
 .progress-text {
@@ -135,9 +130,9 @@ body {
 .popup {
   display: block;
   position: fixed;
-  top: 50%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Center both vertically and horizontally */
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
   z-index: 1000 !important;
   padding: 20px;
   border-radius: 10px;
@@ -207,8 +202,12 @@ div.App-list {
   row-gap: 50px;
   padding-top: 90px;
   position: relative;
-  top: 200px;
-  left: 5%;
+  top: 130px;
+  /* left: 5%; */
+}
+
+h1 {
+  text-align: center;
 }
 
 /* div.App-list div.mov{
@@ -234,9 +233,8 @@ div.mov {
 }
 
 .none {
-  position: fixed;
+  position: absolute;
   left: 50%;
-  top: 50%;
   transform: translate(-50%, -50%);
 }
 
@@ -250,7 +248,7 @@ div.mov {
   }
 }
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   div.App-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
