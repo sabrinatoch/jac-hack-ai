@@ -49,7 +49,7 @@ function Details({ movie, hidden, onClose }) {
       <a href="#" className="close" onClick={onClose}></a>
       <h3>{movie.title}</h3>
       <p>{movie.release_date}</p>
-      <p>🍅 {rottenScore} %</p>
+      <p>🍅 {rottenScore}% on Rotten Tomatoes</p>
       <p>{movie.overview}</p>
       <p>Where you can watch it:</p>
       <ul>
