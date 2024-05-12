@@ -5,13 +5,8 @@ export default function List({ movies, onMovieClick }) {
     <div id="container">
       <div className="App-list">
         {movies.length > 0 ? (
-<<<<<<< HEAD
           // movies.map((movie) =>
             movies.map((mov) => (
-=======
-          movies.map((movie) =>
-            movie.map((mov) => ( 
->>>>>>> 9879d59c02f098c946b44ac9e16027e1c7c65ce7
               <div
                 className="mov"
                 key={mov.id}

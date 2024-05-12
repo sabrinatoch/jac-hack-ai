@@ -1,20 +1,20 @@
 import { MovieDb } from 'moviedb-promise';
+const moviedb = new MovieDb('39b66e8f6eab8dade70c8ec1356a75c3');
+
 import express from "express";
 const app = express();
 const port = 8888;
-const moviedb = new MovieDb('39b66e8f6eab8dade70c8ec1356a75c3');
+
+import {config as dotenvConfig} from 'dotenv';
 import OpenAI from "openai";
+// dotenvConfig();
+// const openaiApiKey = process.env.OPENAI_API_KEY;
 const openai = new OpenAI({apiKey: 'sk-proj-eKcPtkULFLk6uU4w9YzkT3BlbkFJqFDiexYq0SxaanH5B59J'});
+
 import path from 'path';
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
-// moviedb.searchMovie({ query: 'Alien Island' })
-// .then((res) => {
-//   console.log(res)
-// })
-// .catch(console.error);
 
 app.use(express.static(__dirname + "../movie-wormz-ai/public"));
 
