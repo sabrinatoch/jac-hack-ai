@@ -5,7 +5,7 @@ import express from "express";
 const app = express();
 const port = 8888;
 
-import {config as dotenvConfig} from 'dotenv';
+// import {config as dotenvConfig} from 'dotenv';
 import OpenAI from "openai";
 // dotenvConfig();
 // const openaiApiKey = process.env.OPENAI_API_KEY;
@@ -66,7 +66,6 @@ app.get("/prompt/:plot", async (req, res) => {
             console.error("Error fetching movie:", error);
         }
     }));
-
     res.json(movies);
 }) // prompt plot
 

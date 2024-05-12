@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import "../styles/App.css";
 
-import { HfInference } from "@huggingface/inference";
-import { HfAgent } from "@huggingface/agents";
-import { createRepo, commit, deleteRepo, listFiles } from "@huggingface/hub";
+// import { HfInference } from "@huggingface/inference";
+// import { HfAgent } from "@huggingface/agents";
+// import { createRepo, commit, deleteRepo, listFiles } from "@huggingface/hub";
 import Search from "./Search";
 import SearchVibe from "./SearchVibe";
 import List from "./List";
