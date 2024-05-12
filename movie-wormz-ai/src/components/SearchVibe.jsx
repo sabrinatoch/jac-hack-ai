@@ -12,16 +12,21 @@ function SearchVibe({ search }){
             clear();
         }
     }
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+          handleClick();
+          console.log('Enter key pressed, input value:', inputValue);
+        }
+      };
     const clear = () => {
         setInputTitle("");
     }
     return(
-        <div className='search'>
-            <label htmlFor="search">Search by Vibe: </label>
-            <input id="search" name="search" type="text" onChange={handleChange} value={inputTitle}/>
-            <button name ="submit" id="submit" onClick={handleClick}>Submit</button>
+        <div className="search">
+            <label htmlFor="search">Search: </label>
+            <input id="search" name="search" type="text" onChange={handleChange} value={inputTitle} onKeyDown={handleKeyDown}/>
         </div>
     );
 }
 
-export default SearchVibe;
+export default Search;

@@ -12,14 +12,18 @@ function Search({ search }){
             clear();
         }
     }
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+          handleClick();
+        }
+      };
     const clear = () => {
         setInputTitle("");
     }
     return(
-        <div>
+        <div className="search">
             <label htmlFor="search">Search: </label>
-            <input id="search" name="search" type="text" onChange={handleChange} value={inputTitle}/>
-            <button name ="submit" id="submit" onClick={handleClick}>Submit</button>
+            <input id="search" name="search" type="text" onChange={handleChange} value={inputTitle} onKeyDown={handleKeyDown}/>
         </div>
     );
 }

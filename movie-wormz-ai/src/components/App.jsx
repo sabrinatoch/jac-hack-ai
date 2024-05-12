@@ -22,9 +22,22 @@ function App() {
           .then((data) => data)
         );
       }
-      fetchTitleMovies()
+      fetchTitleMovies();
     }
   } // searchMovies()
+
+  const searchByPlot = (plot) => {
+    if (plot.length > 0) {
+      async function fetchMoviesByPlot() {
+        setMovies(
+          await fetch("/prompt/" + plot)
+          .then((res) => res.json())
+          .then((data) => data)
+        );
+        fetchMoviesByPlot();
+      }
+    }
+  } // searchByPlot
 
   const movieDetails = (id) => {
     async function fetchMov() {

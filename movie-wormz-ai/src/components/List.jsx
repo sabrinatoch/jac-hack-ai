@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Details from "./Details";
 
 export default function List({ movies, onMovieClick }) {
@@ -11,12 +11,25 @@ export default function List({ movies, onMovieClick }) {
         setSelectedMovieId(id);
       }
     };
+  const [loading, setLoading] = useState(true);
+  const [imageSrc, setImageSrc] = useState(null);
+
+  const handleImageLoad = () => {
+    setLoading(false);
+  };
+
+  const handleImageError = () => {
+    setLoading(false);
+    setImageSrc('../default_poster.png');
+    console.log('Error loading image');
+  };
+
   return (
     <div id="container">
       <div className="App-list">
         {movies.length > 0 ? (
-          movies.map((movie) =>
-            movie.map((mov) => ( 
+          // movies.map((movie) =>
+            movies.map((mov) => (
               <div
                 className="mov"
                 key={mov.id}
@@ -24,14 +37,18 @@ export default function List({ movies, onMovieClick }) {
               >
                 {console.log(mov)}
                 <p className="title" onClick={() => toggleDetails(mov.id)}>{mov.title}</p>
-                <img src={`https://image.tmdb.org/t/p/w500/${mov.poster_path}? `} width="81" height="120" />
+                <img 
+                  src={`https://image.tmdb.org/t/p/w500/${mov.poster_path}`} 
+                  width="81" 
+                  height="120"  
+                  onLoad={handleImageLoad}
+                  onError={handleImageError}
+                  alt={mov.title}
+                />
                 {selectedMovieId === mov.id && <Details mov={mov} />}
-                {/* <div className="details">
-                  
-                </div> */}
               </div>
             ))
-          )
+          // )
         ) : (
           <div className="none">No movies found.</div>
         )}
