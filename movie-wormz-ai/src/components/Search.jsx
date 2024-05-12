@@ -23,8 +23,7 @@ function Search({ search }){
     }
     return(
         <div className="search">
-            <label htmlFor="search">Search: </label>
-            <input id="search" name="search" type="text" onChange={handleChange} value={inputTitle} onKeyDown={handleKeyDown}/>
+            <input id="search" name="search" type="text" onChange={handleChange} value={inputTitle} onKeyDown={handleKeyDown} placeholder='Search for movies like...'/>
         </div>
     );
 }

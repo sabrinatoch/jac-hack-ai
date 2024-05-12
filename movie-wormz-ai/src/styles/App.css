@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+15&display=swap");
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,10 +7,14 @@
   text-align: center;
 }
 
-body{
+body {
   color: white;
-  background-color: #F2EBE0;
-  background-image: url('../movie-9pvmdtvz4cb0xl37.jpg');
+  background-color: #f2ebe0;
+  background-image: url("../wp5978594.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Jersey 15";
+  font-size: 1.5em;
 }
 
 .language-container {
@@ -23,11 +29,12 @@ body{
   width: 800px;
 }
 
-.textbox-container>textarea, .language-selector {
+.textbox-container > textarea,
+.language-selector {
   width: 50%;
 }
 
-.language-selector>select {
+.language-selector > select {
   width: 150px;
 }
 
@@ -53,6 +60,19 @@ body{
   white-space: nowrap;
 }
 
+#search {
+  padding: 15px;
+  width: 85%;
+  border-radius: 20px;
+  font-size: 19px;
+  font-family: "Jerseyv";
+  margin-bottom: 20px;
+  position: fixed;
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%, -50%);
+}
+
 .progress-text {
   z-index: 2;
 }
@@ -74,40 +94,47 @@ body{
   gap: 10px;
 }
 
-div.search{
+/* div.search{
   color: #151109;
   background-color: #a5aee19c;
   padding: 20px;
   border-radius: 15px;
+} */
+
+input[type="submit"] {
+  background-color: #a5aee1;
+  font-weight: bold;
+  border-radius: 2px;
+  border-width: 0px;
+  border-color: #a5aee1;
+  padding: 5px;
 }
 
-input[type="submit"]{
-    background-color: #A5AEE1;
-    font-weight: bold;
-    border-radius: 2px;
-    border-width: 0px;
-    border-color: #A5AEE1;
-    padding: 5px;
-}
-
-label{
+label {
   font-weight: bold;
 }
 
-div.App-list{
+div.App-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 50px;
   row-gap: 50px;
+  margin-top: 50px;
 }
-div.mov{
+div.mov {
   color: black;
-    background-color: #f2ebe09c;
   padding: 5px;
   border-radius: 15px;
   padding-bottom: 5px;
 }
 
-.title{
+.mov img {
+  border-radius: 15px;
+}
+
+.title {
   font-weight: bold;
+}
+
+@media screen {
 }
