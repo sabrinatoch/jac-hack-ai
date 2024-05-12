@@ -7,7 +7,7 @@ function Details(title, overview, original_Language, release_date,popularity ) {
         <div class="movie-details">
           <h3>{title}</h3>
             <p>{overview}</p>
-            <P>{release_date}</P>
+            <p>{release_date}</p>
             {original_Language === "en"? <p>Original Language: English</p>: <p>Original Language: unknown</p>}
         </div>
     );
