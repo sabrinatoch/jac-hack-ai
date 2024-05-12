@@ -124,7 +124,7 @@ body {
   position: fixed;
   top: 50%;
   left: 50%;
-  z-index: 10;
+  z-index: 20;
   padding: 20px;
   border-radius: 10px;
   color: white;
@@ -179,7 +179,7 @@ input[type="submit"] {
 }
 
 input{
-  z-index: 5;
+  z-index: 10;
 }
 
 label {
@@ -189,7 +189,7 @@ label {
 div.App-list {
   display: grid;
   grid-template-columns: 1fr;
-  transition: transform 10s ease;
+  transition: transform 3s ease;
   column-gap: 50px;
   row-gap: 50px;
   padding-top: 90px;
