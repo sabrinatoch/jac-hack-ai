@@ -15,7 +15,7 @@ function SearchVibe({ search }){
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
           handleClick();
-          console.log('Enter key pressed, input value:', inputValue);
+          
         }
       };
     const clear = () => {
@@ -23,10 +23,10 @@ function SearchVibe({ search }){
     }
     return(
         <div className="search">
-            <label htmlFor="search">Search: </label>
-            <input id="search" name="search" type="text" onChange={handleChange} value={inputTitle} onKeyDown={handleKeyDown}/>
+            <label htmlFor="vibe">Search by Vibes: </label>
+            <input id="vibe" name="vibe" type="text" onChange={handleChange} value={inputTitle} onKeyDown={handleKeyDown}/>
         </div>
     );
 }
 
-export default Search;
+export default SearchVibe;
