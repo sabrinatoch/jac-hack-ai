@@ -1,9 +1,7 @@
-import React, { useState } from "react";
 import React, { useState, useEffect } from "react";
 import Details from "./Details";
 
 export default function List({ movies, onMovieClick }) {
-  const [selectedMovieId, setSelectedMovieId] = React.useState(null);
   const [selectedMovieId, setSelectedMovieId] = useState(null);
   const [isHidden, setHidden] = useState(true);
 
@@ -48,7 +46,6 @@ export default function List({ movies, onMovieClick }) {
 
   return (
     <div id="container">
-      <div className="App-list">
       <div className="App-list" style={{ transform: gridTransform }}>
         {movies.length > 0 ? (
           movies.map((mov) => (
